@@ -432,6 +432,9 @@ header .social i:hover {
   width: 100%;
   height: auto;
 }
+.shagi_pry_zdachi_med .shagi_pry_zdachi_med__img .text_no_transform {
+  display: none;
+}
 
 .calc {
   text-transform: uppercase;
@@ -667,8 +670,15 @@ h6.text_no_transform {
 .podgotovka_k_zdache .podgotovka_k_zdache__image {
   overflow: hidden;
   display: flex;
-  display-width: 100%;
-  display-height: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+.podgotovka_k_zdache .podgotovka_k_zdache__image img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .svagites_s_nami_i_uznaite_bg {
@@ -679,6 +689,7 @@ h6.text_no_transform {
 .svagites_s_nami_i_uznaite_bg ul {
   padding: 20px 0;
   margin: 0 1em;
+  margin-right: 0;
 }
 .svagites_s_nami_i_uznaite_bg ul li::before {
   color: #000;
@@ -709,7 +720,7 @@ h6.text_no_transform {
   width: 100%;
   margin: 15px auto;
   padding: 20px 0;
-  max-width: 356px;
+  max-width: 100%;
   font-weight: 400;
   font-size: 24px;
   font-style: normal;
@@ -1497,6 +1508,8 @@ button:hover {
     max-height: 150px;
     -o-object-fit: cover;
        object-fit: cover;
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
   }
   .gde_med_block .gde_med_image .text_no_transform {
     display: block;
@@ -1521,6 +1534,91 @@ button:hover {
     line-height: 21px;
     margin: 0;
     margin-bottom: 10px;
+  }
+  .shagi_pry_zdachi_med {
+    grid-template-columns: 1fr;
+    padding-right: 0;
+    padding: 0 15px;
+  }
+  .shagi_pry_zdachi_med .text_no_transform {
+    display: none;
+  }
+  .shagi_pry_zdachi_med .shagi_pry_zdachi_med__img img {
+    max-height: 150px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
+  }
+  .shagi_pry_zdachi_med .shagi_pry_zdachi_med__img .text_no_transform {
+    display: block;
+  }
+  .podgotovka_k_zdache .podgotovka_k_zdache_wrapper {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+  .podgotovka_k_zdache .podgotovka_k_zdache_wrapper .podgotovka_k_zdache__text .text_no_transform, .podgotovka_k_zdache .podgotovka_k_zdache_wrapper .podgotovka_k_zdache__text p {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 1rem 0;
+  }
+  .podgotovka_k_zdache .podgotovka_k_zdache_wrapper .podgotovka_k_zdache__image {
+    order: -1;
+  }
+  .podgotovka_k_zdache .podgotovka_k_zdache_wrapper .podgotovka_k_zdache__image img {
+    max-height: 150px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
+    width: 100%;
+  }
+  .podgotovka_k_zdache .podgotovka_k_zdache_wrapper .podgotovka_k_zdache__image .butt {
+    width: 100%;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 15px 0;
+    padding: 11px 0;
+  }
+  .svagites_s_nami_i_uznaite_bg {
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.9) 100%), url("/img/svagites_s_nami_i_uznaite_bg.png");
+    margin: -15px 0;
+    padding-bottom: 0;
+  }
+  .svagites_s_nami_i_uznaite_bg ul li {
+    font-size: 14px;
+    line-height: 18px;
+    color: #000;
+  }
+  .svagites_s_nami_i_uznaite_bg .text_no_transform, .svagites_s_nami_i_uznaite_bg p {
+    font-size: 14px;
+    line-height: 18px;
+    color: #000;
+  }
+  .svagites_s_nami_i_uznaite_bg .butt {
+    width: 100%;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 15px 0;
+    padding: 11px 0;
+  }
+  h4.text_no_transform_left_orange {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .skolko_stoit_kg-medi .col-12 {
+    padding: 0;
+  }
+  .skolko_stoit_kg-medi .col-12 .text_no_transform {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .skolko_stoit_kg-medi .gray-bg-block {
+    padding: 20px 16px;
+  }
+  .skolko_stoit_kg-medi .gray-bg-block .text_no_transform {
+    font-size: 14px;
+    line-height: 18px;
   }
   .main_image_med {
     min-height: 10rem;
