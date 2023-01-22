@@ -143,8 +143,10 @@ section p {
   text-transform: uppercase;
   margin: 120px auto;
   width: 50%;
-  animation-duration: 1.5s;
-  animation-delay: 0.5s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 .butt:hover {
   color: #e2e2e2;
@@ -397,9 +399,11 @@ header .social i:hover {
   margin: 10% 25%;
 }
 .section-advantage img:hover {
-  animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  -webkit-animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+          animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   perspective: 1000px;
 }
 
@@ -445,9 +449,11 @@ header .social i:hover {
   width: 50%;
 }
 .section-process img:hover {
-  animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  -webkit-animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+          animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   perspective: 1000px;
 }
 .section-process p {
@@ -583,9 +589,11 @@ header .social i:hover {
   width: 60%;
 }
 .section-last img:hover {
-  animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  -webkit-animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+          animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   perspective: 1000px;
 }
 .section-last strong {
@@ -614,6 +622,14 @@ header .social i:hover {
   text-align: center;
   margin-top: 25px;
   height: 50px;
+}
+.form-control::-moz-placeholder, .btn::-moz-placeholder {
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+.form-control:-ms-input-placeholder, .btn:-ms-input-placeholder {
+  font-weight: lighter;
+  text-transform: uppercase;
 }
 .form-control::placeholder, .btn::placeholder {
   font-weight: lighter;
@@ -831,7 +847,8 @@ footer .butt a:hover {
 }
 .section-metalloprokat-bu img:hover {
   transition: 0.3s ease;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   transform: scale(1.1);
 }
 
@@ -934,15 +951,12 @@ footer .butt a:hover {
   h1 {
     font-size: 2.5em !important;
   }
-
   p {
     text-align: justify;
   }
-
   header {
     display: none;
   }
-
   nav .menu {
     text-align: right !important;
   }
@@ -975,15 +989,12 @@ footer .butt a:hover {
     text-align: center;
     color: #ffffff;
   }
-
   .calc {
     position: relative;
   }
-
   .butt {
     width: 90%;
   }
-
   .section-cooperation .calc {
     width: 100%;
     margin: 0;
@@ -991,30 +1002,25 @@ footer .butt a:hover {
   .section-cooperation ul {
     margin: 15%;
   }
-
   .orange, .yellow, .white {
     padding: 10px !important;
   }
-
   .pict {
     background-position: bottom;
     background-size: 100% 20%;
   }
-
   .section-process p {
     text-align: center;
   }
   .section-process p::after {
     content: "";
   }
-
   .section-prof {
     background: none;
   }
   .section-prof p {
     text-align: justify;
   }
-
   .section-about {
     padding: 0;
     background: url("../img/pic3.png") no-repeat #eeeeee;
@@ -1029,11 +1035,9 @@ footer .butt a:hover {
     margin: 5% 15%;
     text-align: left;
   }
-
   .section-economy p {
     text-align: justify;
   }
-
   .section-last .pict {
     background: none;
   }
@@ -1042,11 +1046,9 @@ footer .butt a:hover {
     display: inline-block;
     text-align: center;
   }
-
   .section-price .col-md-5 {
     padding: 0;
   }
-
   .overlay-callback #form-callback {
     width: 90%;
     padding: 25px 10px;
@@ -1057,7 +1059,6 @@ footer .butt a:hover {
   .overlay-callback .form-control, .overlay-callback .btn {
     margin-top: 20px;
   }
-
   footer {
     text-align: center;
   }
@@ -1072,11 +1073,9 @@ footer .butt a:hover {
     width: 90%;
     margin: 5%;
   }
-
   .social-block {
     display: block;
   }
-
   .section-zvet img:nth-of-type(1) {
     width: 100%;
     float: none;
@@ -1092,11 +1091,9 @@ footer .butt a:hover {
     float: none;
     padding: 0;
   }
-
   .section-metalloprokat-bu img {
     width: 100%;
   }
-
   .section-demontazh .slog, .section-vyvoz .slog, .section-price .slog {
     margin: 25px 0;
   }
@@ -1113,6 +1110,4 @@ footer .butt a:hover {
     float: none;
     padding-left: 0;
   }
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
