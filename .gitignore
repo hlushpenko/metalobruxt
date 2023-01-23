@@ -3,3 +3,4 @@
 .gitognore
 .htaccess_orig
 .htaccess
+.vscode/*
