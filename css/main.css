@@ -1310,7 +1310,7 @@ button:hover {
 }
 
 /* Tablets+ (вертикальная и горизонтальная ориентация) ----------- */
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 9921px) {
   .menu__links-item_dropdown:hover .menu__links-item-body {
     display: block;
   }
@@ -1322,21 +1322,12 @@ button:hover {
   }
 }
 /* Smartphones (вертикальная и горизонтальная ориентация) ----------- */
-@media only screen and (max-width: 480px) {
-  h1 {
-    font-size: 2.5em !important;
-  }
-  p {
-    text-align: justify;
-  }
+@media only screen and (max-width: 991px) {
   header {
     display: none;
   }
   nav .menu {
     text-align: right !important;
-  }
-  nav .menu a {
-    color: #ffffff;
   }
   nav .menu .phone {
     display: block !important;
@@ -1367,6 +1358,9 @@ button:hover {
     background-color: #272727;
     padding: 10px 15px 15px 5px;
   }
+  nav .menu a {
+    color: #ffffff;
+  }
   nav .menu__icon {
     display: inline-block;
   }
@@ -1386,6 +1380,47 @@ button:hover {
     padding: 4px 0;
     text-align: center;
     color: #ffffff;
+  }
+  .menu__links-item-body {
+    display: none;
+    transition: 0.3s;
+    background-color: transparent;
+    position: initial !important;
+    height: auto;
+  }
+  .menu__links-item-body .menu__links-item {
+    margin: auto;
+    font-size: 18px;
+    display: block;
+    padding: 4px 0;
+  }
+  .menu__links-item-body .menu__links-item::before {
+    opacity: 0;
+  }
+  .menu__links-item-body .menu__links-item__active::before {
+    opacity: 1;
+    content: "❯";
+    width: 10px;
+    height: 10px;
+    color: #bcbcbc;
+    position: relative;
+    left: -10px;
+    top: 0;
+  }
+  .menu__links-item_dropdown__active .menu__links-item-body {
+    display: block;
+  }
+  .menu__links-item:hover:after {
+    display: none;
+  }
+}
+/* Smartphones (вертикальная и горизонтальная ориентация) ----------- */
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 2.5em !important;
+  }
+  p {
+    text-align: justify;
   }
   .calc {
     position: relative;
@@ -1697,37 +1732,5 @@ button:hover {
   .text-left .big_p {
     line-height: 21px;
     font-size: 16px;
-  }
-  .menu__links-item-body {
-    display: none;
-    transition: 0.3s;
-    background-color: transparent;
-    position: initial !important;
-    height: auto;
-  }
-  .menu__links-item-body .menu__links-item {
-    margin: auto;
-    font-size: 18px;
-    display: block;
-    padding: 4px 0;
-  }
-  .menu__links-item-body .menu__links-item::before {
-    opacity: 0;
-  }
-  .menu__links-item-body .menu__links-item__active::before {
-    opacity: 1;
-    content: "❯";
-    width: 10px;
-    height: 10px;
-    color: #bcbcbc;
-    position: relative;
-    left: -10px;
-    top: 0;
-  }
-  .menu__links-item_dropdown__active .menu__links-item-body {
-    display: block;
-  }
-  .menu__links-item:hover:after {
-    display: none;
   }
 }/*# sourceMappingURL=main.css.map */
