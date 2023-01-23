@@ -248,6 +248,7 @@ header .social i:hover {
   height: 35px;
   position: relative;
   cursor: pointer;
+  z-index: 1001;
 }
 .menu__icon span {
   display: block;
@@ -307,13 +308,29 @@ header .social i:hover {
   -moz-transition: all 0.3s ease-in-out;
 }
 
-.menu__links-item_dropdown:hover .menu__links-item-body {
-  display: block;
-}
-
 .menu__links-item-head,
 .menu__links-item-head:hover {
   color: white;
+}
+
+.menu__links-item_dropdown_icon {
+  display: block;
+  width: 64px;
+  height: 48px;
+  padding: 0;
+  color: #bcbcbc;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+
+.menu__links-item_dropdown_icon__active {
+  transform: rotate(270deg);
+}
+.menu__links-item_dropdown_icon__active .menu__links-item-body {
+  display: block;
 }
 
 .menu__links-item-body {
@@ -679,6 +696,7 @@ h6.text_no_transform {
 .podgotovka_k_zdache .podgotovka_k_zdache__image img {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
 }
 
 .svagites_s_nami_i_uznaite_bg {
@@ -1279,6 +1297,15 @@ button:hover {
   font-size: 3em;
 }
 
+/* Tablets+ (вертикальная и горизонтальная ориентация) ----------- */
+@media only screen and (min-width: 481px) {
+  .menu__links-item_dropdown:hover .menu__links-item-body {
+    display: block;
+  }
+  .butt_med {
+    max-width: 356px;
+  }
+}
 /* Smartphones (вертикальная и горизонтальная ориентация) ----------- */
 @media only screen and (max-width: 480px) {
   h1 {
@@ -1298,9 +1325,32 @@ button:hover {
   }
   nav .menu .phone {
     display: block !important;
+    padding-right: 15px;
+  }
+  nav .menu .phone::after {
+    display: inline-block;
+    content: "❯";
+    margin-left: 10px;
+    transition: 0.3s;
+    transform: rotate(0deg);
   }
   nav .menu .phone i {
     color: #ffefe5;
+  }
+  nav .menu .phone .other_phones_wrapper {
+    display: none;
+  }
+  nav .menu .phone_active::after {
+    transform: rotate(90deg);
+  }
+  nav .menu .phone_active .other_phones_wrapper {
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 1;
+    background-color: #272727;
+    padding: 10px 15px;
   }
   nav .menu__icon {
     display: inline-block;
@@ -1633,7 +1683,8 @@ button:hover {
     font-size: 16px;
   }
   .menu__links-item-body {
-    display: block;
+    display: none;
+    transition: 0.3s;
     background-color: transparent;
     position: initial !important;
     height: auto;
@@ -1644,7 +1695,20 @@ button:hover {
     display: block;
     padding: 4px 0;
   }
-  .menu__links-item-body .menu__links-item__active {
-    border-bottom: 1px solid #fff;
+  .menu__links-item-body .menu__links-item::before {
+    opacity: 0;
+  }
+  .menu__links-item-body .menu__links-item__active::before {
+    opacity: 1;
+    content: "❯";
+    width: 10px;
+    height: 10px;
+    color: #bcbcbc;
+    position: relative;
+    left: -10px;
+    top: 0;
+  }
+  .menu__links-item_dropdown__active .menu__links-item-body {
+    display: block;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -1,4 +1,15 @@
 $(document).ready(function () {
+    
+    $('.menu__links-item_dropdown_icon').click(function() {
+        $(this).toggleClass( "menu__links-item_dropdown_icon__active");
+        $('.menu__links-item_dropdown').toggleClass("menu__links-item_dropdown__active")
+    });
+
+    $('.phone').after().click(function() {
+        $(this).toggleClass("phone_active")
+    });
+
+
     new WOW().init();
     /*-----------MAIN MENU------------*/
     $(function () {
@@ -7,11 +18,13 @@ $(document).ready(function () {
                 .toggleClass('menu_state_open');
         });
 
-        $('.menu__links-item').on('click', function () {
-            $(this).closest('.menu')
-                .removeClass('menu_state_open');
-        });
+        // $('.menu__links-item').on('click', function () {
+        //     $(this).closest('.menu')
+        //         .removeClass('menu_state_open');
+        // });
     });
+
+    
     $(document).on('scroll', function () {
         if
         ($(document).scrollTop() > 20) {

@@ -219,6 +219,7 @@ header
   height: 35px
   position: relative
   cursor: pointer
+  z-index: 1001
 
   span
     display: block
@@ -276,13 +277,27 @@ header
       transition: all 0.3s ease-in-out
       -webkit-transition: all 0.3s ease-in-out
       -moz-transition: all 0.3s ease-in-out
-.menu__links-item_dropdown
-  &:hover
-    .menu__links-item-body
-      display: block
+
 .menu__links-item-head,
 .menu__links-item-head:hover
   color: white
+.menu__links-item_dropdown_icon
+  display: block
+  width: 64px
+  height: 48px
+  padding: 0
+  color: #bcbcbc
+  position: absolute
+  right: 10px
+  top: 5px
+  transform: rotate(180deg)
+  transition: .3s
+
+.menu__links-item_dropdown_icon__active
+  transform: rotate(270deg)
+  .menu__links-item-body
+    display: block
+  
 .menu__links-item-body
   display: none
   width: auto
@@ -605,6 +620,7 @@ h6.text_no_transform
     height: auto
     img
       object-fit: cover
+      width: 100%
 
 .svagites_s_nami_i_uznaite_bg
   padding: 30px 20px
@@ -1172,6 +1188,21 @@ button
   padding: 10%
   text-align: center
   font-size: 3em
+
+
+/* Tablets+ (вертикальная и горизонтальная ориентация) ----------- */
+@media only screen and (min-width: 481px)
+  .menu__links-item_dropdown
+    &:hover
+      .menu__links-item-body
+        display: block
+  .butt_med
+    max-width: 356px
+
+
+
+
+
 /* Smartphones (вертикальная и горизонтальная ориентация) ----------- */
 @media only screen and (max-width: 480px)
   h1
@@ -1189,9 +1220,30 @@ button
 
       .phone
         display: block !important
+        padding-right: 15px
+        &::after
+          display: inline-block
+          content: '\276F'
+          margin-left: 10px
+          transition: .3s
+          transform: rotate(0deg)
 
         i
           color: #ffefe5
+        .other_phones_wrapper
+          display: none
+
+      .phone_active
+        &::after
+          transform: rotate(90deg)
+        .other_phones_wrapper
+          display: block
+          position: absolute
+          top: 40px
+          left: 0
+          z-index: 1
+          background-color: #272727
+          padding: 10px 15px
 
     .menu__icon
       display: inline-block
@@ -1505,7 +1557,8 @@ button
       font-size: 16px
 
   .menu__links-item-body
-    display: block
+    display: none
+    transition: .3s
     background-color: transparent
     position: initial!important
     height: auto
@@ -1514,5 +1567,19 @@ button
       font-size: 18px
       display: block
       padding: 4px 0
+      &::before
+        opacity: 0
     .menu__links-item__active
-      border-bottom: 1px solid #fff
+      &::before
+        opacity: 1
+        content: "\276F"
+        width: 10px
+        height: 10px
+        color: #bcbcbc
+        position: relative
+        left: -10px
+        top: 0
+  
+  .menu__links-item_dropdown__active
+    .menu__links-item-body
+      display: block
