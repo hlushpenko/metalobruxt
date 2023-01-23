@@ -1724,4 +1724,7 @@ button:hover {
   .menu__links-item_dropdown__active .menu__links-item-body {
     display: block;
   }
+  .menu__links-item:hover:after {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
