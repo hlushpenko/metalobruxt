@@ -1317,6 +1317,9 @@ button:hover {
   .butt_med {
     max-width: 356px;
   }
+  .menu__links-item_dropdown_icon {
+    display: none;
+  }
 }
 /* Smartphones (вертикальная и горизонтальная ориентация) ----------- */
 @media only screen and (max-width: 480px) {
