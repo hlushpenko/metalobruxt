@@ -644,6 +644,13 @@ h6.text_no_transform {
 .gde_med_block .gde_med_image .text_no_transform {
   display: none;
 }
+.gde_med_block .gde_med_image img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
 
 .gde_med_wrapper h3 {
   height: 70px;
@@ -690,6 +697,7 @@ h6.text_no_transform {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  align-content: flex-start;
   width: 100%;
   height: auto;
 }
@@ -698,11 +706,15 @@ h6.text_no_transform {
      object-fit: cover;
   width: 100%;
 }
+.podgotovka_k_zdache .podgotovka_k_zdache__image .butt_med {
+  margin: 15px 0;
+}
 
 .svagites_s_nami_i_uznaite_bg {
   padding: 30px 20px;
-  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.92) 50%, rgba(255, 255, 255, 0) 100%), url("/img/svagites_s_nami_i_uznaite_bg.png");
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.92) 50%, rgba(255, 255, 255, 0) 100%), url("/img/new/FB_IMG_1673535950372.jpg");
   background-size: cover;
+  background-position: right;
 }
 .svagites_s_nami_i_uznaite_bg ul {
   padding: 20px 0;
@@ -747,7 +759,7 @@ h6.text_no_transform {
 .main_image_med {
   min-height: 20rem;
   background-repeat: no-repeat;
-  background: url("/img/sdat-meniy-lom.png");
+  background: url("/img/new/Priem-medi.jpg");
   background-position: center;
   background-size: cover;
   margin-top: 1rem;
@@ -1347,10 +1359,10 @@ button:hover {
     display: block;
     position: absolute;
     top: 40px;
-    left: 0;
+    left: -5px;
     z-index: 1;
     background-color: #272727;
-    padding: 10px 15px;
+    padding: 10px 15px 15px 5px;
   }
   nav .menu__icon {
     display: inline-block;
@@ -1595,6 +1607,7 @@ button:hover {
   }
   .shagi_pry_zdachi_med .shagi_pry_zdachi_med__img img {
     max-height: 150px;
+    height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: 50% 50%;
@@ -1631,7 +1644,7 @@ button:hover {
     padding: 11px 0;
   }
   .svagites_s_nami_i_uznaite_bg {
-    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.9) 100%), url("/img/svagites_s_nami_i_uznaite_bg.png");
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.9) 100%), url("/img/new/FB_IMG_1673535950372.jpg");
     margin: -15px 0;
     padding-bottom: 0;
   }
